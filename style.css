@@ -54,22 +54,28 @@ label{
     gap: 5px;
     align-items: center;
    
+   
 }
 
 label::before{
-    content: "+";
+    content: ">";
+    font-size:20px ;
 
  
 }
 
 input:checked ~ label::before{
-    content: "-";
+    content: "<";
     color: red;
+    transform: rotate(-90deg);
+    font-size: 20px;
+    transition: 0.5s;
+    transform-origin: 8px ;
  
     
 }
 
 input[type="radio"]:checked ~ label ~ .dropdown{
  height: 120px;
-    padding: 10px 10px 20px ;
+ 
 }
